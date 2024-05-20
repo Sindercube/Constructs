@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "constructs",
+	"version": "${version}",
+	"name": "Test Data Driven Golems",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.sindercube.constructs.Constructs"
+		]
+	},
+	"mixins": [
+		"constructs.mixins.json"
+	],
+	"accessWidener" : "constructs.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
