@@ -1,0 +1,28 @@
+{
+	"pattern": [
+		[
+			"   ",
+			"   ",
+			"###"
+		],
+		[
+			" ^ ",
+			" $ ",
+			"###"
+		],
+		[
+			"   ",
+			"   ",
+			"###"
+		]
+	],
+	"key": {
+		"^": { "tag": "minecraft:golem_head" },
+		"$": { "block": "minecraft:gold_block" },
+		"#": { "block": "minecraft:netherrack" }
+	},
+	"offset": [
+		0, 2, 0
+	],
+	"entity": "minecraft:zombie"
+}

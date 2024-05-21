@@ -1,15 +1,14 @@
 {
 	"pattern": [
 		"^",
-		"#",
 		"#"
 	],
 	"key": {
 		"^": { "tag": "minecraft:golem_head" },
-		"#": { "block": "minecraft:snow_block" }
+		"#": { "block": "minecraft:netherrack" }
 	},
 	"offset": [
-		0, 2, 0
+		0, 1, 0
 	],
-	"entity": "minecraft:snow_golem"
+	"entity": "minecraft:piglin"
 }
