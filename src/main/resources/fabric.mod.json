@@ -27,7 +27,9 @@
 		"java": ">=21",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/class_1297": ["com/sindercube/constructs/asm/EntityAccess"]
+		}
 	}
 }

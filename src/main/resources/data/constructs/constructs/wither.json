@@ -1,0 +1,15 @@
+{
+	"pattern": [
+		"^^^",
+		"###",
+		" # "
+	],
+	"key": {
+		"^": { "tag": "minecraft:wither_head" },
+		"#": { "block": "minecraft:soul_sand" }
+	},
+	"offset": [
+		1, 2, 0
+	],
+	"entity": "minecraft:wither"
+}

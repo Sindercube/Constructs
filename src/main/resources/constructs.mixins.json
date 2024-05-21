@@ -3,7 +3,11 @@
 	"package": "com.sindercube.constructs.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"CarvedPumpkinBlockMixin"
+		"BlockFixMixins$CarvedPumpkinBlockMixin",
+		"BlockFixMixins$WitherSkullBlockMixin",
+		"BlockItemMixin",
+		"EntityFixMixins$IronGolemMixin",
+		"EntityFixMixins$WitherEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
