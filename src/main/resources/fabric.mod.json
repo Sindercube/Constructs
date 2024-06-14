@@ -10,7 +10,9 @@
 		"sources": "https://github.com/Sindercube/Constructs",
 		"discord": "https://discord.sindercu.be"
 	},
+	"license": "LGPL-3.0-only",
 
+	"environment": "server",
 	"entrypoints": {
 		"main": [ "com.sindercube.constructs.Constructs" ]
 	},
