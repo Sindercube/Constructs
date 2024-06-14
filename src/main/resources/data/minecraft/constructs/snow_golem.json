@@ -5,7 +5,7 @@
 		"#"
 	],
 	"key": {
-		"^": { "tag": "minecraft:golem_head" },
+		"^": { "tag": "c:golem_head" },
 		"#": { "block": "minecraft:snow_block" }
 	},
 	"offset": [

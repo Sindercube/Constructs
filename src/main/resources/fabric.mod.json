@@ -1,31 +1,25 @@
 {
 	"schemaVersion": 1,
+	"version": "${mod_version}",
 	"id": "constructs",
-	"version": "${version}",
-	"name": "Test Data Driven Golems",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
+
+	"name": "Constructs",
+	"description": "Data driven constructed entities",
+	"authors": [ "Sindercube" ],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Sindercube/Constructs",
+		"discord": "https://discord.sindercu.be"
 	},
-	"environment": "*",
+
 	"entrypoints": {
-		"main": [
-			"com.sindercube.constructs.Constructs"
-		]
+		"main": [ "com.sindercube.constructs.Constructs" ]
 	},
 	"mixins": [
 		"constructs.mixins.json"
 	],
 	"accessWidener" : "constructs.accesswidener",
 	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.20.5",
-		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": ">=${fabric_version}"
 	},
 	"custom": {
 		"loom:injected_interfaces": {

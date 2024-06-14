@@ -1,7 +1,6 @@
 package com.sindercube.constructs.mixin;
 
-import com.sindercube.constructs.main.ConstructData;
-import com.sindercube.constructs.main.ConstructLoader;
+import com.sindercube.constructs.main.ConstructUtil;
 import net.minecraft.block.CarvedPumpkinBlock;
 import net.minecraft.block.WitherSkullBlock;
 import net.minecraft.item.ItemStack;
@@ -14,7 +13,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@SuppressWarnings("unused")
 public class BlockFixMixins {
 
 	@Mixin(CarvedPumpkinBlock.class)
@@ -27,13 +25,7 @@ public class BlockFixMixins {
 
 		@Inject(method = "canDispense", at = @At("RETURN"), cancellable = true)
 		private void modifyCanDispense(WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-			for (ConstructData construct : ConstructLoader.INSTANCE.getConstructs()) {
-				if (construct.getPattern().searchAround(world, pos) != null) {
-					cir.setReturnValue(true);
-					return;
-				}
-			}
-			cir.setReturnValue(false);
+			cir.setReturnValue(ConstructUtil.canDispense(world, pos));
 		}
 
 	}
@@ -48,13 +40,7 @@ public class BlockFixMixins {
 
 		@Inject(method = "canDispense", at = @At("RETURN"), cancellable = true)
 		private static void modifyCanDispense(World world, BlockPos pos, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-			for (ConstructData construct : ConstructLoader.INSTANCE.getConstructs()) {
-				if (construct.getPattern().searchAround(world, pos) != null) {
-					cir.setReturnValue(true);
-					return;
-				}
-			}
-			cir.setReturnValue(false);
+			cir.setReturnValue(ConstructUtil.canDispense(world, pos));
 		}
 
 	}

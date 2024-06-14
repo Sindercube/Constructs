@@ -14,7 +14,6 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
-@SuppressWarnings("unused")
 public class EntityFixMixins {
 
 	@Mixin(IronGolemEntity.class)
@@ -31,7 +30,7 @@ public class EntityFixMixins {
 
 
 	@Mixin(WitherEntity.class)
-	public abstract static class WitherEntityMixin extends Entity {
+	public abstract static class WitherEntityMixin extends Entity implements EntityAccess {
 
 		public WitherEntityMixin(EntityType<?> type, World world) {
 			super(type, world);

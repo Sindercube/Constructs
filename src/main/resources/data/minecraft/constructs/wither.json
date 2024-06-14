@@ -5,7 +5,7 @@
 		" # "
 	],
 	"key": {
-		"^": { "tag": "minecraft:wither_head" },
+		"^": { "tag": "c:wither_head" },
 		"#": { "block": "minecraft:soul_sand" }
 	},
 	"offset": [
